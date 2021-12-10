@@ -44,4 +44,15 @@ public interface Encryptor extends TypeBasedSPI {
      * @return plaintext
      */
     Object decrypt(String ciphertext);
+
+    /**
+     * Decode by original type
+     *
+     * @param ciphertext
+     * @param type
+     * @return
+     */
+    default Object decrypt(String ciphertext, Class<?> type) {
+        return "decryptValueByType";
+    }
 }

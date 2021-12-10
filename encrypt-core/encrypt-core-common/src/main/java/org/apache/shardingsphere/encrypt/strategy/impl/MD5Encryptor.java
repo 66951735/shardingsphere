@@ -54,4 +54,9 @@ public final class MD5Encryptor implements Encryptor {
     public Object decrypt(final String ciphertext) {
         return ciphertext;
     }
+
+    @Override
+    public Object decrypt(final String ciphertext, final Class<?> type) {
+        return ciphertext;
+    }
 }

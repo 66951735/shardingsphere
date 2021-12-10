@@ -53,7 +53,7 @@ public final class EncryptMergedResult implements MergedResult {
             return mergedResult.getValue(columnIndex, type);
         }
         String ciphertext = (String) mergedResult.getValue(columnIndex, String.class);
-        return null == ciphertext ? null : encryptor.get().decrypt(ciphertext);
+        return null == ciphertext ? null : encryptor.get().decrypt(ciphertext, type);
     }
     
     @Override
